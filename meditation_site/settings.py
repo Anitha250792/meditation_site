@@ -15,7 +15,12 @@ DEBUG = os.environ.get("DEBUG", "True") == "True"
 # Allowed Hosts
 
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+# Allowed Hosts
+ALLOWED_HOSTS = os.getenv(
+    "DJANGO_ALLOWED_HOSTS",
+    "127.0.0.1,localhost,meditation-site-2.onrender.com"
+).split(",")
+
 
 
 # -------------------------------
