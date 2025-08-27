@@ -1,0 +1,53 @@
+/* Import Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+/* Section styling */
+.about-section {
+  background-color: #fff5f8; /* light pinkish background as in screenshot */
+  color: #333;
+}
+
+/* Headings */
+.about-section h2,
+.about-section h3 {
+  color: #000;
+  font-weight: 700;
+}
+
+.about-section h5 {
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+/* About icons */
+.about-icon {
+  max-width: 120px;
+  width: 100%;
+}
+/* Teacher cards */
+.teacher-card {
+  max-height: 300px; /* adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-body{
+  max-height: 300px;
+
+}
+
+.teacher-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+
+.teacher-img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  margin: 20px;
+}

@@ -1,0 +1,106 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Free Trial - DEE PLUS{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/free.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="py-5" style="background-color: #fbe4eb;">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5" style="color:#6a1b9a;">
+      Discover popular meditations
+    </h2>
+
+    <div class="row">
+      {% for m in meditations %}
+      <div class="col-12 mb-4">
+        <div class="card border-0 shadow-sm p-3 rounded-4" style="background:white;">
+          <div class="d-flex align-items-start">
+            
+            <!-- Teacher Image with Play Button -->
+            <div class="position-relative me-3" style="flex-shrink:0;">
+              <img src="{% static m.image %}" 
+                   alt="{{ m.name }}" 
+                   style="width:80px; height:80px; object-fit:cover; border-radius:5px;">
+              <button class="btn btn-light rounded-circle position-absolute top-50 start-50 translate-middle shadow-sm play-btn" 
+                      data-id="{{ forloop.counter }}" 
+                      style="width:45px; height:45px; background:rgba(255,255,255,0.85);">
+                ▶
+              </button>
+            </div>
+
+            <!-- Meditation Info -->
+            <div class="flex-grow-1">
+              <p class="mb-1 fw-semibold">{{ m.name }}</p>
+              <h5 class="fw-bold">{{ m.title }}</h5>
+              <p class="text-muted small">{{ m.description }}</p>
+
+              <!-- Hidden audio -->
+              <audio id="audio-{{ forloop.counter }}" preload="none">
+                <source src="{% static m.audio %}" type="audio/mpeg">
+              </audio>
+
+              <!-- Custom Progress -->
+              <div class="audio-ui mt-2">
+                <input type="range" min="0" max="100" value="0" class="form-range" id="progress-{{ forloop.counter }}">
+                <div class="d-flex justify-content-between small">
+                  <span id="current-{{ forloop.counter }}">0:00</span>
+                  <span>{{ m.duration }}</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Free Trial Button -->
+    <div class="text-center mt-4">
+      <a href="{% url 'payment' %}" class="btn btn-dark px-4 py-2 rounded-pill fw-bold">
+        Get 14 Days Free Trial
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".play-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-id");
+      const audio = document.getElementById("audio-" + id);
+      const progress = document.getElementById("progress-" + id);
+      const currentTimeEl = document.getElementById("current-" + id);
+
+      if (audio.paused) {
+        document.querySelectorAll("audio").forEach(a => a.pause());
+        document.querySelectorAll(".play-btn").forEach(b => b.textContent = "▶");
+        audio.play();
+        btn.textContent = "⏸";
+      } else {
+        audio.pause();
+        btn.textContent = "▶";
+      }
+
+      audio.addEventListener("timeupdate", () => {
+        const percent = (audio.currentTime / audio.duration) * 100;
+        progress.value = percent;
+
+        let minutes = Math.floor(audio.currentTime / 60);
+        let seconds = Math.floor(audio.currentTime % 60).toString().padStart(2, '0');
+        currentTimeEl.textContent = `${minutes}:${seconds}`;
+      });
+
+      progress.addEventListener("input", () => {
+        audio.currentTime = (progress.value / 100) * audio.duration;
+      });
+    });
+  });
+});
+</script>
+{% endblock %}

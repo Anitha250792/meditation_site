@@ -1,0 +1,42 @@
+/* Import Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+.text-purple {
+    color: #B285C0;
+}
+
+.trial-btn {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+.trial-btn:hover {
+    background-color: #444;
+}
+
+.meditation-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #f7f1f9;
+}
+
+.meditation-card img {
+    border-radius: 20px 20px 0 0;
+}
+
+.audio-player {
+    background: #eee;
+    border-top: 1px solid #ccc;
+    text-align: left;
+    border-radius: 0 0 20px 20px;
+}
+
+.daily-themes p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}

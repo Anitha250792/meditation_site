@@ -1,0 +1,97 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<!-- Banner -->
+<div class="container mt-4">
+  <div class="text-center">
+    <img src="{% static 'images/contact.jpg' %}" alt="Banner" class="img-fluid rounded">
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="container py-5">
+  <h3 class="text-center fw-bold mb-5">Contact DEE PLUS</h3>
+  <div class="row">
+    
+    <!-- Left Info -->
+    <div class="col-md-6 mb-4">
+      <p><b>Address:</b><br>6, Hethendran Street,<br>Kongu Nagar,<br>Karur - 26</p>
+      <p><b>Mobile No:</b><br>+9532 32556</p>
+      <p><b>E-Mail Id:</b><br>deepluswell@gmail.com</p>
+
+      <p><b>General Enquiries</b><br>
+        Got a general question?<br>
+        Please use this Contact Form to reach out to us.
+      </p>
+
+      <p><b>Feedback</b><br>
+        Do you have something to say about The Guided Meditation Site?<br>
+        Feel free to give us your feedback via this Contact Form.
+      </p>
+
+      <p><b>Opening Time</b><br>
+        Monday - Sunday<br>
+        9.00 AM To 9.00 PM
+      </p>
+    </div>
+
+    <!-- Right Form -->
+    <div class="col-md-6">
+      <form method="post" class="p-4 shadow-sm bg-white rounded">
+        {% csrf_token %}
+
+        <!-- Name -->
+        <div class="mb-3">
+          {% render_field form.name class="custom-input w-100" placeholder="Name" %}
+          {% if form.name.errors %}
+            <div class="text-danger small mt-1">{{ form.name.errors.0 }}</div>
+          {% endif %}
+        </div>
+
+        <!-- Mobile -->
+        <div class="mb-3">
+          {% render_field form.mobile class="custom-input w-100" placeholder="Mobile No" %}
+          {% if form.mobile.errors %}
+            <div class="text-danger small mt-1">{{ form.mobile.errors.0 }}</div>
+          {% endif %}
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          {% render_field form.email class="custom-input w-100" placeholder="E-Mail" %}
+          {% if form.email.errors %}
+            <div class="text-danger small mt-1">{{ form.email.errors.0 }}</div>
+          {% endif %}
+        </div>
+
+        <!-- Message -->
+        <div class="mb-3">
+          {% render_field form.message class="custom-input w-100" rows="4" placeholder="Message" %}
+          {% if form.message.errors %}
+            <div class="text-danger small mt-1">{{ form.message.errors.0 }}</div>
+          {% endif %}
+        </div>
+
+        <!-- Fake reCAPTCHA -->
+        <div class="mb-3 recaptcha-box">
+          <input type="checkbox"> <span>I am Not Robot</span>
+          <img src="{% static 'images/recaptcha.png' %}" alt="reCAPTCHA" style="height:40px;">
+        </div>
+
+        <!-- Submit -->
+        <div class="text-center">
+          <button type="submit" class="btn submit-btn w-100">Contact Us</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

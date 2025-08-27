@@ -1,0 +1,59 @@
+{% load static %}
+
+<footer class="custom-footer py-5 mt-3 p-4" style="background-color:#B285C0; color:white;">
+  <div class="container-xxl">
+    <div class="row gy-4 align-items-start">
+
+      <!-- Logo -->
+      <div class="col-12 col-md-3 text-center text-md-start">
+        <a class="navbar-brand d-flex align-items-center" href="{% url 'home' %}">
+      <img src="{% static 'images/logo.ico' %}" alt="DEE PLUS" class="logo-img me-2" style="width: 100px; height: 100px;">
+    </a>
+      </div>
+
+      <!-- Navigation -->
+      <div class="col-6 col-md-3">
+        <h6 class="fw-bold">Navigation</h6>
+        <ul class="list-unstyled small mt-3">
+          <li><a href="{% url 'index' %}" class="footer-link text-white text-decoration-none">Home</a></li>
+          <li><a href="{% url 'happiness' %}" class="footer-link text-white text-decoration-none">Happiness Week</a></li>
+          <li><a href="{% url 'about' %}" class="footer-link text-white text-decoration-none">About Us</a></li>
+          <li><a href="{% url 'contact' %}" class="footer-link text-white text-decoration-none">Contact Us</a></li>
+          <li><a href="{% url 'course' %}" class="footer-link text-white text-decoration-none">Course</a></li>
+          <li><a href="{% url 'meditation' %}" class="footer-link text-white text-decoration-none">Meditation</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-6 col-md-3">
+        <h6 class="fw-bold">Quick Links</h6>
+        <ul class="list-unstyled small mt-3">
+          <li><a href="#" class="footer-link text-white text-decoration-none">FAQ</a></li>
+          <li><a href="#" class="footer-link text-white text-decoration-none">Terms &amp; Conditions</a></li>
+          <li><a href="#" class="footer-link text-white text-decoration-none">Help Center</a></li>
+          <li><a href="#" class="footer-link text-white text-decoration-none">Partnership</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-12 col-md-3">
+        <h6 class="fw-bold">Contact</h6>
+        <p class="small mt-3 mb-1">6, Hethendran Street,<br>Kongu Nagar,<br>Karur - 26</p>
+        <p class="small mb-1"><i class="bi bi-telephone me-2"></i>+9532 32556</p>
+        <p class="small mb-0"><i class="bi bi-envelope me-2"></i>deepluswell@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Bottom Logo -->
+    <div class="text-center mt-4">
+      <img src="{% static 'images/logo.jfif' %}" alt="meditation" class="footer-logo" style="width:60px; height:60px; border-radius:50%;">
+    </div>
+  </div>
+</footer>
+
+<style>
+  .custom-footer{background:var(--purple);border-radius:20px 20px 0 0}
+.footer-link{color:#fff;text-decoration:none}
+.footer-link:hover{opacity:.85}
+.footer-logo{height:56px;width:56px;border-radius:50%}
+</style>

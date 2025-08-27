@@ -1,0 +1,387 @@
+
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+{% block content %}
+
+<!-- Hero -->
+<section class="container-xxl mt-3">
+  <div class="hero-card rounded-3 overflow-hidden">
+    <img src="{% static 'images/hero-1.jpg' %}" alt="Meditation Hero" class="w-100 hero-img">
+    <a href="{% url 'payment' %}" class="btn btn-primary-cta position-absolute top-50 start-50 Left-100 px-4 py-2 rounded-pill">Join Now</a>
+  </div>
+</section>
+
+<!-- What DEE PLUS Stands For -->
+<section class="container-xxl section-pad">
+  <h5 class="section-title text-purple fw-bold text-center">What DEE PLUS <span class="fw-normal">Stands For</span></h5>
+  <div class="row g-4 align-items-center m-5 position-relative">
+
+
+    <div class="col-lg-6">
+      <div class="acronym">
+        <div class="row g-3">
+          {% comment %} Left list for letters {% endcomment %}
+          <div class="col-12">
+            <ul class="list-unstyled acronym-list">
+              <li><span class="letter">M</span> <span class="item"><strong>Mindfulness</strong><small>Being aware of the present</small></span></li>
+              <li><span class="letter">E</span> <span class="item"><strong>Equanimity</strong><small>Calm and balanced emotions</small></span></li>
+              <li><span class="letter">D</span> <span class="item"><strong>Discipline</strong><small>Consistency in practice</small></span></li>
+              <li><span class="letter">I</span> <span class="item"><strong>Inner Peace</strong><small>A state of deep tranquility</small></span></li>
+              <li><span class="letter">T</span> <span class="item"><strong>Tranquility</strong><small>Soothing the restless mind</small></span></li>
+              <li><span class="letter">A</span> <span class="item"><strong>Awareness</strong><small>Conscious observation without reaction</small></span></li>
+              <li><span class="letter">T</span> <span class="item"><strong>Transformation</strong><small>Gradual personal growth</small></span></li>
+              <li><span class="letter">I</span> <span class="item"><strong>Intention</strong><small>Clarity of purpose</small></span></li>
+              <li><span class="letter">O</span> <span class="item"><strong>Observation</strong><small>Watching thoughts without control</small></span></li>
+              <li><span class="letter">N</span> <span class="item"><strong>Now</strong><small>Anchoring yourself in the present moment</small></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="vertical-dotted-line"></div>
+    </div>
+   
+    <div class="col-lg-6">
+      <div class="yoga-card text-center">
+        <img src="{% static 'images/meditation.jpg' %}" class="yoga-img" alt="Yoga">
+        <div class="mt-3">
+          <h6 class="text-purple fw-bold">In Therapy Helps With</h6>
+          <ul class="small list-unstyled mb-0">
+            <li>Reducing stress and anxiety</li>
+            <li>Enhancing focus and clarity</li>
+            <li>Improving emotional regulation</li>
+            <li>Promoting self-awareness</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Clinic Intro -->
+<section class="container-xxl section-pad">
+  <div class="row g-4 align-items-center intro-card rounded-4 p-3 p-md-4">
+    <div class="col-lg-5">
+      <img src="{% static 'images/clinic.jpg' %}" class="w-100 rounded-3" alt="Clinic">
+    </div>
+    <div class="col-lg-7">
+      <p class="small text-muted mb-1">Welcome To</p>
+      <h4 class="fw-bold text-purple mb-2">Private Psychiatry<br>&amp; Therapy Clinic</h4>
+      <p class="mb-3">A specialized healthcare facility offering confidential, personalized mental health services, including psychiatric evaluations, medication management, and psychotherapy. Designed to provide discreet, compassionate care for individuals seeking support for emotional, behavioral, or psychological challenges.</p>
+      <a class="btn btn-primary-cta rounded-pill px-4" href="#">Meet Our Team</a>
+  
+    </div>
+       
+  </div>
+  
+</section>
+
+<!-- Stats -->
+<section class="stats-bar py-3">
+  <div class="container-xxl">
+    <div class="row text-center text-black fw-bold small">
+      <div class="col-6 col-md-3 py-2">
+        <div class="fs-5">1586</div>
+        <div class="fw-normal">Session Per Year</div>
+      </div>  
+      <div class="col-6 col-md-3 py-2">
+        <div class="fs-5">20</div>
+        <div class="fw-normal">Year Experience</div>
+      </div>
+      <div class="col-6 col-md-3 py-2">
+        <div class="fs-5">5000+</div>
+        <div class="fw-normal">Successful Therapy</div>
+      </div>
+      <div class="col-6 col-md-3 py-2">
+        <div class="fs-5">18</div>
+        <div class="fw-normal">Specialist in Our team</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-3 services-section">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4 text-purple">Our Services</h2>
+    <div class="row g-3">
+      
+      <!-- Card 1 -->
+      <div class="col-6 col-md-4">
+        <div class="card service-card">
+          <img src="{% static 'images/services-1.jpg' %}" class="card-img-top" alt="Individual Therapy">
+          <div class="card-body">
+            <h5 class="card-title">Individual Therapy</h5>
+            <a href="#" class="read-more">Read more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 (Active Highlight) -->
+      <div class="col-6 col-md-4">
+        <div class="card service-card active">
+          <img src="{% static 'images/couple_therapy.jpeg' %}" class="card-img-top" alt="Couples Therapy">
+          <div class="card-body">
+            <h5 class="card-title">Couples Therapy</h5>
+            <a href="#" class="read-more">Read more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-6 col-md-4">
+        <div class="card service-card">
+          <img src="{% static 'images/filial-therapy.jpg' %}" class="card-img-top" alt="Group Therapy">
+          <div class="card-body">
+            <h5 class="card-title">Group Therapy</h5>
+            <a href="#" class="read-more">Read more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-6 col-md-4">
+        <div class="card service-card">
+          <img src="{% static 'images/family.jpg' %}" class="card-img-top" alt="Family Therapy">
+          <div class="card-body">
+            <h5 class="card-title">Family Therapy</h5>
+            <a href="#" class="read-more">Read more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-6 col-md-4">
+        <div class="card service-card">
+          <img src="{% static 'images/group.jpg' %}" class="card-img-top" alt="Group Session">
+          <div class="card-body">
+            <h5 class="card-title">Group Session</h5>
+            <a href="#" class="read-more">Read more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-6 col-md-4">
+        <div class="card service-card">
+          <img src="{% static 'images/online.jpg' %}" class="card-img-top" alt="Online Therapy">
+          <div class="card-body">
+            <h5 class="card-title">Online Therapy</h5>
+            <a href="#" class="read-more">Read more</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-5 testimonials-section">
+  <div class="container text-center">
+    <h5 class="text-muted">Testimonials</h5>
+    <h2 class="fw-bold text-purple">What Our Clients Say</h2>
+
+   <div id="testimonialCarousel" 
+     class="carousel slide mt-4" 
+     data-bs-ride="carousel" 
+     data-bs-interval="4000" 
+     data-bs-pause="hover">
+      <div class="carousel-inner">
+
+        <!-- Testimonial 1 -->
+        <div class="carousel-item active">
+          <div class="testimonial-card">
+            <img src="{% static 'images/user2.avif' %}" class="rounded-circle" width="50" alt="Client">
+            <p class="mb-2">"This therapy really changed my life! I feel calmer and happier now."</p>
+            <small>- Client 1</small>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="carousel-item">
+          <div class="testimonial-card">
+            <img src="{% static 'images/user3.avif' %}" class="rounded-circle mb-3" width="50" height="50" alt="Client">
+            <p class="mb-2">"The sessions are amazing, and the therapist is very understanding."</p>
+            <small>- Client 2</small>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="carousel-item">
+          <div class="testimonial-card">
+            <img src="{% static 'images/user4.jpg' %}" class="rounded-circle mb-3" width="50" alt="Client">
+            <p class="mb-2">"I finally feel at peace with myself after these sessions."</p>
+            <small>- Client 3</small>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="carousel-item">
+          <div class="testimonial-card">
+            <img src="{% static 'images/user.avif' %}" class="rounded-circle mb-3" width="50" height="50" alt="Client">
+            <p class="mb-2">"The guidance I received here was life-changing."</p>
+            <small>- Client 4</small>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Team Carousel -->
+<div id="teamCarousel" class="carousel slide mt-3" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+    {% for member in team_members %}
+      {% if forloop.counter0|divisibleby:4 %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+          <div class="row g-3">
+      {% endif %}
+
+        <div class="col-6 col-md-3">
+          <div class="card team-card h-100 border-0">
+            <img src="{% static member.img %}" class="card-img-top" alt="{{ member.name }}">
+            <div class="card-body text-center">
+              <div class="fw-bold small">{{ member.name }}</div>
+              <div class="xsmall text-muted">{{ member.role }}</div>
+            </div>
+          </div>
+        </div>
+
+      {% if forloop.counter|divisibleby:4 or forloop.last %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- Arrows -->
+  <button class="carousel-control-prev round-arrow" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+    <span class="bi bi-arrow-left"></span>
+  </button>
+  <button class="carousel-control-next round-arrow" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+    <span class="bi bi-arrow-right"></span>
+  </button>
+
+  <!-- Dynamic Indicators -->
+ <div class="carousel-indicators position-static mt-3">
+  {% for i in slides %}
+    <button type="button" data-bs-target="#teamCarousel" 
+            data-bs-slide-to="{{ forloop.counter0 }}" 
+            class="{% if forloop.first %}active{% endif %}"
+            aria-label="Slide {{ forloop.counter }}">
+    </button>
+  {% endfor %}
+</div>
+
+</div>
+
+
+<!-- Latest Articles -->
+<section class="container-xxl section-pad">
+  <p class="text-center xsmall text-muted">From the Blog</p>
+  <h5 class="text-purple fw-bold text-center">Latest Articles</h5>
+  <div class="row g-3 mt-2">
+    {% for article in articles %}
+    <div class="col-12 col-md-4">
+      <div class="card article-card h-100 border-0">
+        <img src="{% static article.image %}" class="card-img-top" alt="{{ article.title }}">
+        <div class="card-body">
+          <div class="xsmall text-muted">{{ article.category }} | {{ article.date }}</div>
+          <h6 class="fw-bold small mt-2">{{ article.title }}</h6>
+          <a href="#" class="stretched-link xsmall">Read more</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+
+
+<!-- FAQ Section -->
+<section class="container-xxl section-pad">
+  <h5 class="text-purple fw-bold text-center">FAQs</h5>
+
+  <div class="accordion mt-4" id="faqAccordion">
+    <!-- Q1 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          1. How do I know if I need therapy?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          If you’re feeling overwhelmed, anxious, low, or stuck—or simply want to better understand yourself—therapy can help. You don’t need a crisis to benefit from mental health support.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          2. What is mental wellness?
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Mental wellness means having a positive state of mental health, resilience, and coping skills to manage daily stress effectively.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          3. What types of therapy do you offer?
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          We offer family therapy, individual counseling, mindfulness practices, and group sessions depending on client needs.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          4. What can I expect in a therapy session?
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Sessions typically last 45–60 minutes and involve open conversation, guided reflection, and coping strategies tailored to your situation.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

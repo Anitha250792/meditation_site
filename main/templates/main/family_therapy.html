@@ -1,0 +1,82 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/family.css' %}">
+{% endblock %}
+{% block title %}Family Therapy – DEE PLUS{% endblock %}
+
+{% block content %}
+<div class="text-center my-5">
+        <h2 class="fw-bold" style="color:#6A1B9A;">Family Therapy</h2>
+        <p class="lead">Family issues can be one of the biggest mental health stressors in a person's life.<br>
+        Seeking help through family therapy can be an important step toward healing for you and your loved ones.</p>
+    </div>
+
+    <!-- Therapy Cards -->
+    <div class="container">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="{% static 'images/f1.jpg' %}" class="card-img-top rounded-top" alt="family" style="width: 546px;height: 350px;">
+                    <div class="card-body text-center">
+                        <h6 class="card-title text-purple">Understanding ‘Family Of Origin‘ Work in Therapy</h6>
+                        <a href="{% url 'approach' %}" class="btn btn-purple mt-2">I Get This</a>
+                        <p class="mt-2 small">Medically reviewed By Rotary - LCP</p>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-12 col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="{% static 'images/f2.jpg' %}" class="card-img-top rounded-top" alt="family" style="width: 546px;height: 350px;">
+                    <div class="card-body text-center">
+                        <h6 class="card-title text-purple">How Structural Family Therapy Works</h6>
+                        <a href="{% url 'approach' %}" class="btn btn-purple mt-2">I Get This</a>
+                        <p class="mt-2 small">Medically reviewed By Carno - MD</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="{% static 'images/stress.jpg' %}" class="card-img-top rounded-top" alt="family" style="width: 546px;height: 350px;">
+                    <div class="card-body text-center">
+                        <h6 class="card-title text-purple">How Structural Family Therapy Works</h6>
+                        <a href="{% url 'approach' %}" class="btn btn-purple mt-2">I Get This</a>
+                        <p class="mt-2 small">Medically reviewed By Carno - MD</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="{% static 'images/f4.jpg' %}" class="card-img-top rounded-top" alt="family" style="width: 546px;height: 350px;">
+                    <div class="card-body text-center">
+                        <h6 class="card-title text-purple">How Structural Family Therapy Works</h6>
+                        <a href="{% url 'approach' %}" class="btn btn-purple mt-2">I Get This</a>
+                        <p class="mt-2 small">Medically reviewed By Carno - MD</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="{% static 'images/filial-therapy.jpg' %}" class="card-img-top rounded-top" alt="family" style="width: 546px;height: 350px;">
+                    <div class="card-body text-center">
+                        <h6 class="card-title text-purple">How Structural Family Therapy Works</h6>
+                        <a href="{% url 'approach' %}" class="btn btn-purple mt-2">I Get This</a>
+                        <p class="mt-2 small">Medically reviewed By Carno - MD</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="{% static 'images/f6.jpg' %}" class="card-img-top rounded-top" alt="family" style="width: 546px;height: 350px;">
+                    <div class="card-body text-center">
+                        <h6 class="card-title text-purple">How Structural Family Therapy Works</h6>
+                        <a href="{% url 'approach' %}" class="btn btn-purple mt-2">I Get This</a>
+                        <p class="mt-2 small">Medically reviewed By Carno - MD</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

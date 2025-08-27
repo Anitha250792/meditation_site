@@ -1,0 +1,40 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Home - Meditation{% endblock %}
+
+{% block content %}
+<style>
+  .hero {
+    text-align: center;        /* centers text and image horizontally */
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .hero img {
+    display: block;            /* makes image behave like a block */
+    margin: 0 auto;            /* centers the image */
+    max-width: 200px;          /* optional: control width */
+    height: auto;
+    
+  }
+  
+</style>
+
+<section class="hero">
+  <h1>Welcome to Meditation</h1>
+  <img src="{% static 'images/logo.jfif' %}" alt="banner">
+</section>
+
+
+<div class="text-center mb-5">
+        <a href="{% url 'signin' %}" class="btn btn-primary w-10">Sign In</a>
+
+    </div>
+
+
+{% endblock %}

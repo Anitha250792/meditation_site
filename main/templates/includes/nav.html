@@ -1,0 +1,43 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg custom-nav sticky-top mt-3 py-2">
+  <div class="container-xxl">
+
+    <!-- Brand Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="{% url 'home' %}">
+      <img src="{% static 'images/logo.ico' %}" alt="DEE PLUS" class="logo-img me-2">
+    </a>
+
+    <!-- Toggler for Mobile -->
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation Links -->
+    <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+      <ul class="navbar-nav gap-lg-3">
+        <li class="nav-item">
+          <a class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}" href="{% url 'index' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.resolver_match.url_name == 'therapy' %}active{% endif %}" href="{% url 'therapy' %}">Therapy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.resolver_match.url_name == 'meditation' %}active{% endif %}" href="{% url 'meditation' %}">Meditation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}" href="{% url 'contact' %}">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- Icons visible on mobile too -->
+      <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+        <a href="{% url 'approach' %}" class="nav-icon"><i class="bi bi-search"></i></a>
+        <a href="{% url 'signin' %}" class="nav-icon ms-3"><i class="bi bi-person"></i></a>
+
+      </div>
+    </div>
+  </div>
+</nav>

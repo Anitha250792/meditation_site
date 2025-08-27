@@ -1,0 +1,36 @@
+/* Import Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+.text-purple {
+    color: #80004d; /* heading text color */
+}
+
+.form-card {
+    background-color: #ffeef9;
+    border-radius: 20px;
+}
+
+.custom-input {
+    background-color: #e9c9f5;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.custom-input:focus {
+    box-shadow: 0 0 5px #B285C0;
+    border-color: #B285C0;
+}
+
+.submit-btn {
+    background: linear-gradient(to right, #8b006e, #b239a2);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #b239a2, #8b006e);
+}

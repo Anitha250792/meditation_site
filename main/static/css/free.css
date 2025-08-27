@@ -1,0 +1,50 @@
+/* Import Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+
+.text-purple {
+    color: #B285C0;
+}
+
+/* Meditation Card */
+.meditation-card {
+    background: #fff;
+    border-radius: 20px;
+}
+
+.meditation-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.play-icon {
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+}
+
+/* Audio Mockup */
+.audio-ui input[type="range"] {
+    width: 100%;
+}
+
+.trial-btn {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 12px 30px;
+    transition: 0.3s;
+}
+.trial-btn:hover {
+    background-color: #444;
+}

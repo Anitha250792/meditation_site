@@ -1,0 +1,66 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/therapy.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container py-5">
+
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <h2 class="title">DEE PLUS Therapy</h2>
+      <p class="description mx-auto">
+        Therapy is a process where a person works with a trained professional to explore thoughts, 
+        feelings, and behaviors in order to improve mental health, cope with challenges, and promote 
+        personal growth. It can include talking, practicing new skills, or using specific techniques 
+        to heal, understand oneself better, or manage life more effectively.
+      </p>
+      <img src="{% static 'images/therapy-home.png' %}" class="img-fluid rounded service-img mt-3" alt="Therapy Session">
+    </div>
+
+    <!-- Services Section -->
+    <h3 class="text-center mb-4 service-title">Our Services</h3>
+    
+    <div class="row g-4 text-center">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="service-card">
+          <img src="{% static 'images/services-1.jpg' %}" class="img-fluid rounded service-img" alt="Individual Therapy">
+          <p class="service-text">Individual Therapy</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="service-card">
+          <img src="{% static 'images/couple_therapy.jpeg' %}" class="img-fluid rounded service-img" alt="Couple Therapy">
+          <p class="service-text">Couple Therapy</p>
+        </div>
+      </div>
+     <div class="col-12 col-md-6 col-lg-4">
+  <div class="service-card">
+    <a href="{% url 'family_therapy' %}" class="text-decoration-none">
+      <img src="{% static 'images/family.jpg' %}" class="img-fluid rounded service-img" alt="Family Therapy">
+      <p class="service-text">Family Therapy</p>
+    </a>
+  </div>
+</div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="service-card">
+          <img src="{% static 'images/group.jpg' %}" class="img-fluid rounded service-img" alt="Group Therapy">
+          <p class="service-text">Group Therapy</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="service-card">
+          <img src="{% static 'images/physio.jpg' %}" class="img-fluid rounded service-img" alt="Group Therapy">
+          <p class="service-text">Group Therapy</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="service-card">
+          <img src="{% static 'images/online_therapy.jpg' %}" class="img-fluid rounded service-img" alt="Online Therapy">
+          <p class="service-text">Online Therapy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

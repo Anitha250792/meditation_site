@@ -1,0 +1,54 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/meditation.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container py-5">
+
+    <!-- Page Title -->
+    <h3 class="text-center text-purple fw-bold mb-4">Meditation</h3>
+
+    <!-- Top Button -->
+    <div class="text-center mb-5">
+        <a href="{% url 'free_trial' %}" class="btn trial-btn">Start Your Free Trial</a>
+
+    </div>
+
+    <!-- Featured Section -->
+    <div class="row align-items-center mb-5">
+        <div class="col-lg-6 mb-4">
+            <h6 class="fw-bold">Featured Meditation</h6>
+            <h4 class="text-purple fw-bold">Sleep Meditation</h4>
+        <a href="{% url 'free_trial' %}" class="btn trial-btn">Start Your Free Trial</a>
+        </div>
+        <div class="col-lg-6 text-center">
+            <div class="meditation-card shadow-lg rounded-4 overflow-hidden">
+                <img src="{% static 'images/user4.jpg' %}" alt="Meditation" class="img-fluid w-100">
+
+                <!-- Audio Player -->
+                <div class="audio-player px-3 py-3">
+                    <p class="mb-2 fw-bold">Soothe Anxiety to Sleep</p>
+                    <audio id="meditationAudio" controls preload="none" class="w-100">
+                        <source src="{% static 'audio/sleep_meditation.mp3' %}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Daily Themes -->
+    <div class="daily-themes text-center mt-5">
+        <h6 class="fw-bold">Daily Themes (5–10 minutes each)</h6>
+        <p><b>Day 1 – Gratitude</b><br>Focus on 3 things you’re thankful for. Feel the warmth they bring.</p>
+        <p><b>Day 2 – Loving-Kindness</b><br>Silently repeat: “May I be happy. May others be happy.”</p>
+        <p><b>Day 3 – Present Moment Joy</b><br>Mindfully notice small joys—breath, light, sound—with full attention.</p>
+        <p><b>Day 4 – Smile Meditation</b><br>Gently smile while breathing slowly. Let the feeling of ease spread.</p>
+        <p><b>Day 5 – Positive Memories</b><br>Recall a joyful moment. Re-experience it with all your senses.</p>
+        <p><b>Day 6 – Self-Compassion</b><br>Send kindness to yourself. Affirm: “I am enough. I deserve joy.”</p>
+        <p><b>Day 7 – Intentional Joy</b><br>Visualize a joyful life. Imagine waking up smiling, living freely.</p>
+    </div>
+
+</div>
+{% endblock %}

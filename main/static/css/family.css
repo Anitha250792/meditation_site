@@ -1,0 +1,54 @@
+/* Import Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FAE9F2; /* light pink background */
+}
+
+/* Headings + Subtext */
+.heading {
+  color: var(--text-dark);
+  font-family: 'Roboto', sans-serif;
+}
+.subtext {
+  max-width: 720px;
+  color: #444;
+  font-size: 1.1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Card Styling */
+.shadow-soft {
+  box-shadow: 10px 10px 0 rgba(0,0,0,.09);
+  border-radius: 1.25rem;
+}
+.ft-card {
+  border-radius: 1.25rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.ft-card .title {
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.ft-card .reviewer {
+  color: #6c6c6c;
+  font-size: 0.9rem;
+}
+
+/* Buttons */
+.btn-pill {
+  border-radius: 9999px;
+}
+.btn-brand {
+  background: var(--brand);
+  color: #fff;
+  transition: all .3s ease;
+}
+.btn-brand:hover {
+  background: var(--brand-dark);
+  color: #fff;
+}

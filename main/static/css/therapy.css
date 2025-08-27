@@ -1,0 +1,42 @@
+/* Import Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+.title {
+  color: #6c1d63; /* Deep Purple */
+  font-weight: 700;
+}
+
+.description {
+  max-width: 700px;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.service-title {
+  color: #6c1d63;
+  font-weight: 600;
+}
+
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.service-img {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.service-text {
+  margin-top: 12px;
+  font-weight: 500;
+  color: #222;
+}
